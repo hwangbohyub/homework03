@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>intro</title>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-inverse p-4">
+          <h4 class="text-white">로또 추첨기</h4>
+          <span class="text-muted">멋사 인천대 5기 황보협</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    
+    <!--Content-->
+    <div class="container mt-5">
+      <h1>제 <span class="text-primary font-weight-bold"><%=@drwNo%></span>회차 Lotto</h1>
+      <div class="row mt-3">
+        <div class="col">
+          <img src="<%= asset_path @img_main %>">
+        </div>
+        <div class="col my-auto">
+          <small id="emailHelp" class="form-text text-muted">1~45의 숫자를 중복 없이 입력해주세요</small>
+          <form action="/index" method="get">
+            <p></p>
+            <div class="form-group row">
+              <label for="example-number-input" class="col-2 col-form-label">Number1</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num1" id="example-number-input" min="1" max="45">
+              </div>
+              <label for="example-number-input" class="col-2 col-form-label">Number2</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num2" id="example-number-input" min="1" max="45">
+              </div>
+              <label for="example-number-input" class="col-2 col-form-label">Number3</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num3" id="example-number-input" min="1" max="45">
+              </div>
+              <label for="example-number-input" class="col-2 col-form-label">Number4</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num4" id="example-number-input" min="1" max="45">
+              </div>
+              <label for="example-number-input" class="col-2 col-form-label">Number5</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num5" id="example-number-input" min="1" max="45">
+              </div>
+              <label for="example-number-input" class="col-2 col-form-label">Number6</label>
+              <div class="col-10">
+                <input class="form-control" type="number" name="num6" id="example-number-input" min="1" max="45">
+              </div>
+              <div class="col-10 mt-3 d-flex justify-content-center mx-auto">
+                <button type="submit" class="btn btn-primary" name="btn" value="btn_input">제출하기</button>
+                <button type="submit" class="btn btn-danger ml-5" bane="btn" value="btn_random">랜덤 추첨</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta charset='utf-8'>
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-inverse p-4">
+          <h4 class="text-white">로또 추첨기</h4>
+          <span class="text-muted">멋사 인천대 5기 황보협</span>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    
+    <!--이번주 추첨번호-->
+    <div class="container mt-5">
+      <div>
+        <h2 class="text-center">제 <span class="text-primary font-weight-bold"><%=@drwNo%></span>회차 당첨번호</h2>
+        <p class="text-right"><%=@drwNoDate%></p>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center">
+          <div class="p-2"><%=@drw_numbers[0]%></div>
+          <div class="p-2"><%=@drw_numbers[1]%></div>
+          <div class="p-2"><%=@drw_numbers[2]%></div>
+          <div class="p-2"><%=@drw_numbers[3]%></div>
+          <div class="p-2"><%=@drw_numbers[4]%></div>
+          <div class="p-2"><%=@drw_numbers[5]%></div>
+          <div class="p-2">+</div>
+          <div class="p-2"><%=@bonus_number%></div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!--내 추첨번호-->
+    <div class="container mt-5">
+      <div>
+        <div>
+          <h2 class="text-center">내 추첨 번호</h2>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <div class="p-2"><%=@my_numbers[0]%></div>
+          <div class="p-2"><%=@my_numbers[1]%></div>
+          <div class="p-2"><%=@my_numbers[2]%></div>
+          <div class="p-2"><%=@my_numbers[3]%></div>
+          <div class="p-2"><%=@my_numbers[4]%></div>
+          <div class="p-2"><%=@my_numbers[5]%></div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!--결과-->
+    <div class="container mt-5">
+      <div>
+        <h2 class="text-center">결과</h2>
+      </div>
+      <div class="text-center">
+        <p><%=@match_numbers%></p>
+        <p><%=@match_cnt%>개 맞으셨습니다!!</p>
+        <p><span class="font-weight-bold text-danger"><%=@result%></span> 입니다~~</p>
+      </div>
+    </div>
+  </body>
+</html>
